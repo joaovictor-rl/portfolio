@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+  <link rel="icon" type="image/jpg" href="auxl/jvicon.png"> 
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c8130fedfb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="menu-lateral">
+    <a href="#inicio" class="logo">
+      <img src="auxl/jvicon.png" alt="Logo" class="logo-img">
+    </a>
+
+    <div class="submenus">
+      <span data-target="sobre">Sobre</span>
+      <span data-target="projetos">Projetos</span>
+      <span data-target="contato">Contato</span>
+    </div>
+  </div>  
+
+  <main class="conteudo">
+    <section id="inicio" class="secao">
+      <h2 class="typing-container">
+        <span id="typed"></span><span id="cursor"></span>
+      </h2>
+
+      <p>
+        Aqui você encontra meus projetos, experiências e aprendizados como estudante e desenvolvedor. 
+        Role a página para conhecer um pouco mais sobre mim.
+      </p>
+    </section>
+
+    <section id="sobre" class="secao">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou graduando em <strong>Sistemas de Informação</strong> pela Universidade Federal do Pará, iniciando meus estudos em 2025. 
+        Tenho paixão por desenvolvimento web, especialmente na área de <strong>frontend</strong>, e busco unir estética e funcionalidade em meus projetos. 
+        Possuo conhecimentos em <strong>Python, HTML, CSS</strong> e <strong>JavaScript</strong>, sempre explorando novas tecnologias para aprimorar minhas habilidades e criar experiências digitais envolventes.
+      </p>
+
+      <div class="icones-sobre">
+        <i class="fa-brands fa-python icon-sobre"></i>
+        <i class="fa-brands fa-css3-alt icon-sobre"></i>
+        <i class="fa-brands fa-html5 icon-sobre"></i>
+      </div>
+    </section>
+
+    <section id="projetos" class="secao">
+      <h2>Projetos</h2>
+      <p>
+        Meus projetos envolvem desenvolvimento web, interfaces criativas e experimentos visuais.
+        Busco unir estética e funcionalidade em tudo o que faço.
+      </p>
+
+      <div class="projeto-card">
+        <div class="projeto-imagem">
+          <img src="auxl/labscr.png" alt="Screenshot do Site do Projeto 1">
+        </div>
+        <div class="projeto-detalhes">
+          <h3 clasa=" projeto-titulo">LaBioCAD indie</h3>
+          <p>
+ Este site é um projeto independente, desenvolvido por um aluno, e não tem caráter oficial da UFPA. Ele oferece uma visão geral do laboratório LaBioCAD, destacando sua equipe, pesquisas e projetos nas áreas de Bioinformática e Computação de Alto Desempenho. O site apresenta os integrantes do grupo, as ferramentas e publicações desenvolvidas.
+          </p>
+          <div class="projeto-links">
+            <a href="#" class="btn-link" target="_blank">Ver Online</a>
+            <a href="#" class="btn-link repo" target="_blank">Código (GitHub)</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="projeto-card invertido">
+        <div class="projeto-imagem">
+          <img src="auxl/tmscr.png" alt="Screenshot do Site do Projeto 2">
+        </div>
+        <div class="projeto-detalhes">
+          <h3>Tamagotchi Demo</h3>
+          <p>
+O site Tamagotchi Demo é uma maneira descontraída e prática de testar e aplicar conhecimentos de HTML, CSS e JavaScript. Ele simula um pet virtual com atributos de vida, fome e felicidade, permitindo que o usuário interaja com ele por meio de ações como alimentar, brincar e descansar. A ideia é combinar aprendizado de programação web com diversão, servindo como uma demonstração interativa e prática de conceitos de front-end.
+          </p>
+          <div class="projeto-links">
+            <a href="#" class="btn-link" target="_blank">Ver Online</a>
+            <a href="#" class="btn-link repo" target="_blank">Código (GitHub)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao">
+      <h2>Contato</h2>
+      <a href="https://github.com/joaovictor-rl" class="icon-link" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/joão-victor-reis-lisboa-22b596373" class="icon-link" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="mailto:jvturismo2015@gmail.com" class="icon-link" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="https://www.instagram.com/jvictor_rl" class="icon-link" target="_blank">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

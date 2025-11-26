@@ -1,0 +1,338 @@
+@font-face {
+    font-family: Druk;
+    src: url(fonts/Druk-Medium-Trial.otf);
+}
+
+@font-face {
+    font-family: News;
+    src: url(fonts/NewsCycle-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(gray, white);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.conteudo {
+    margin-left: 16rem;
+    width: calc(100% - 16rem);
+    padding: 1rem 6rem;
+    box-sizing: border-box;
+}
+
+.secao {
+    margin-bottom: 40vh;
+}
+
+#contato {
+    margin-bottom: 3rem;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 3rem;
+    left: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    z-index: 10;
+}
+
+.menu-lateral::after {
+    content: "";
+    position: fixed;
+    left: 13rem;
+    top: 0;
+    width: 2px;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+.logo {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+.logo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: brightness(0) invert(0);
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1);
+}
+
+.submenus span {
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+    color: black;
+    transition: color 0.3s ease;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.submenus span:hover {
+    color: gray;
+}
+
+.submenus span.ativo {
+    color: gray;
+    font-weight: bold;
+}
+
+.secao h1, .secao h2 {
+    font-family: 'Druk';
+    font-size: 70px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.secao p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.icon-link {
+    text-decoration: none;
+    color: black;
+    font-size: 100px;
+    transition: 0.3s;
+    letter-spacing: 10px;
+}
+
+.icon-link:hover {
+    color: #ff6600;
+    transform: scale(1.1);
+}
+
+.projeto-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.projeto-card.invertido {
+    flex-direction: row-reverse;
+}
+
+.projeto-imagem {
+    flex: 1;
+    max-width: 50%;
+    border: 2px solid #333;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.projeto-imagem:hover img {
+    transform: scale(1.03);
+}
+
+.projeto-detalhes {
+    flex: 1;
+    max-width: 50%;
+    text-align: justify
+}
+
+.projeto-detalhes h3 {
+    font-family: 'Druk';
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.projeto-detalhes p {
+    font-size: 18px;
+    max-width: none;
+}
+
+.projeto-links {
+    margin-top: 25px;
+}
+
+
+
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 15px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn-link.repo {
+    background-color: black;
+    color: white;
+}
+
+.btn-link:hover {
+    background-color: #ff6600;
+    color: black;
+    border-color: #ff6600;
+}
+
+.btn-link.repo:hover {
+    background-color: #ff6600;
+    color: white;
+    border-color: #ff6600;
+}
+
+@media (max-width: 1200px) {
+    .secao h1, .secao h2 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-lateral {
+        position: static;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #e0e0e0;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .menu-lateral::after {
+        content: none;
+    }
+
+    .menu-lateral .submenus {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #e0e0e0;
+        display: none;
+        padding: 10px 20px;
+    }
+
+    .menu-lateral .logo {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .conteudo {
+        margin-left: 0;
+        width: 100%;
+        padding: 2rem;
+        padding-top: 5rem;
+    }
+
+    .secao {
+        margin-bottom: 50vh;
+    }
+
+    .secao h1, .secao h2 {
+        font-size: 40px;
+    }
+
+    .projeto-card, .projeto-card.invertido {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 80px;
+    }
+
+    .projeto-imagem, .projeto-detalhes {
+        max-width: 100%;
+    }
+
+    .projeto-imagem {
+        box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .icon-link {
+        font-size: 60px;
+        margin-right: 10px;
+    }
+}
+
+.icones-sobre {
+    margin-top: 2rem;
+    letter-spacing: 10px;
+}
+
+.icon-sobre {
+    color: black;
+    font-size: 100px;
+    transition: 0.3s;
+    margin-right: 10px;
+    cursor: default;
+}
+
+.icon-sobre:hover {
+    color: #ff6600;
+    transform: scale(1.1);
+}
+
+.typing-container {
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-family: 'Druk';
+    font-size: 32px;
+    color: black;
+    white-space: normal;
+}
+
+#cursor {
+    display: inline-block;
+    width: 4px;
+    height: 100px;
+    background-color: black;
+    margin-left: 2px;
+    vertical-align: middle;
+    margin-bottom: 15px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
